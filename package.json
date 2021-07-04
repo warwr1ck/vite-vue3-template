@@ -4,7 +4,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "mi": "node minimist"
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "@types/glob": "^7.1.3",
@@ -14,13 +14,26 @@
   "devDependencies": {
     "@types/minimist": "^1.2.1",
     "@types/node": "^15.12.5",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
     "@vitejs/plugin-legacy": "^1.4.3",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.30.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.12.1",
     "lint-staged": "^11.0.0",
     "minimist": "^1.2.5",
     "typescript": "^4.3.2",
     "vite": "^2.3.8",
     "vue-tsc": "^0.0.24"
+  },
+  "lint-staged": {
+    "src/**/*.{vue,js,ts}": [
+      "eslint --fix"
+    ]
   }
 }
