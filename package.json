@@ -4,7 +4,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "prepare": "npx husky install"
+    "prepare": "npx husky install",
+    "lint": "eslint --fix src/**/*.{vue,ts}"
   },
   "dependencies": {
     "vue": "^3.0.5"
